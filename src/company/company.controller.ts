@@ -15,8 +15,11 @@ import { CompanyService } from './company.service';
 import { CreateCompanyDto } from './dto/create-company.dto';
 import { UpdateCompanyDto } from './dto/update-company.dto';
 import { Company } from './entities/company.entity';
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
 
 @Controller('company')
+@ApiTags('company')
+@ApiBearerAuth('access-token')
 @UseGuards(AuthGuard())
 export class CompanyController {
   constructor(private readonly companyService: CompanyService) {}
