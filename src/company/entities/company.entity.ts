@@ -1,4 +1,12 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Team } from 'src/team/entities/team.entity';
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  OneToOne,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity('company')
 export class Company {
@@ -16,4 +24,7 @@ export class Company {
 
   @Column({ type: 'timestamp', default: 'now()' })
   inceptionDate: Date;
+
+  @OneToMany((type) => Team, (team) => team.company)
+  team: Team;
 }

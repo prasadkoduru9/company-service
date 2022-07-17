@@ -6,6 +6,7 @@ import { AppService } from './app.service';
 import { FeedModule } from './feed/feed.module';
 import { CompanyModule } from './company/company.module';
 import { UserModule } from './user/user.module';
+import { TeamModule } from './team/team.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { UserModule } from './user/user.module';
     FeedModule,
     CompanyModule,
     UserModule,
+    TeamModule,
   ],
   controllers: [AppController],
   providers: [AppService],
