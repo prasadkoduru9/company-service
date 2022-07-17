@@ -1,8 +1,8 @@
 {
-  "name": "service-company",
+  "name": "company-service",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "This is a company service",
+  "author": "Naga Siva Prasad",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
