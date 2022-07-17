@@ -30,28 +30,28 @@ export class UserController {
     return this.userService.signIn(createUserDto);
   }
 
-  @Get()
-  @UseGuards(AuthGuard())
-  @ApiBearerAuth('access-token')
-  findAll(@Req() req) {
-    return this.userService.findAll();
-  }
+  // @Get()
+  // @UseGuards(AuthGuard())
+  // @ApiBearerAuth('access-token')
+  // findAll(@Req() req) {
+  //   return this.userService.findAll();
+  // }
 
-  @Get(':id')
-  @ApiBearerAuth('access-token')
-  findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
-  }
+  // @Get(':id')
+  // @ApiBearerAuth('access-token')
+  // findOne(@Param('id') id: string) {
+  //   return this.userService.findOne(+id);
+  // }
 
-  @Patch(':id')
-  @ApiBearerAuth('access-token')
-  update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.userService.update(+id, updateUserDto);
-  }
+  // @Patch(':id')
+  // @ApiBearerAuth('access-token')
+  // update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
+  //   return this.userService.update(+id, updateUserDto);
+  // }
 
-  @Delete(':id')
-  @ApiBearerAuth('access-token')
-  remove(@Param('id') id: string) {
-    return this.userService.remove(+id);
-  }
+  // @Delete(':id')
+  // @ApiBearerAuth('access-token')
+  // remove(@Param('id') id: string) {
+  //   return this.userService.remove(+id);
+  // }
 }
