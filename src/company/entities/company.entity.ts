@@ -26,5 +26,5 @@ export class Company {
   inceptionDate: Date;
 
   @OneToMany((type) => Team, (team) => team.company)
-  team: Team;
+  team: Team[];
 }
